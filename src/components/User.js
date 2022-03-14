@@ -1,10 +1,10 @@
-export default function User(){
+export default function User({loginUser,image,signInName}){
 return(
 <div class="usuario">
-  <img src="assets/img/catanacomics.svg" />
+  <img src={`assets/img/${image}`}/>
   <div class="texto">
-    <strong>catanacomics</strong>
-    Catana
+    <strong>{loginUser}</strong>
+    {signInName}
   </div>
 </div>
 );
