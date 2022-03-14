@@ -1,14 +1,14 @@
 function UserSuggestions({image,userName,followingOrNot}){
   return(
-<div class="sugestao">
-    <div class="usuario">
+<div className="sugestao">
+    <div className="usuario">
       <img src={`assets/img/${image}`}/>
-      <div class="texto">
-        <div class="nome">{userName}</div>
-        <div class="razao">{followingOrNot}</div>
+      <div className="texto">
+        <div className="nome">{userName}</div>
+        <div className="razao">{followingOrNot}</div>
       </div>
     </div>
-    <div class="seguir">Seguir</div>
+    <div className="seguir">Seguir</div>
 </div>
   );
 }
@@ -23,12 +23,12 @@ export default function Suggestions(){
   ]
 
 return(
-<div class="sugestoes">
-  <div class="titulo">
+<div className="sugestoes">
+  <div className="titulo">
     Sugestões para você
     <div>Ver tudo</div>
   </div> 
-  {suggestions.map((suggestion) => <UserSuggestions image ={suggestion.image} userName = {suggestion.userName} followingOrNot = {suggestion.followingOrNot}/>)}
+  {suggestions.map((suggestion,index) => <UserSuggestions image ={suggestion.image} userName = {suggestion.userName} followingOrNot = {suggestion.followingOrNot} key={index}/>)}
 </div>
 );
 }
