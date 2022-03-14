@@ -1,4 +1,4 @@
-import User from './User';
+import User from "./User";
 import Suggestions from "./Suggestions";
 import Footer from "./Footer";
 
@@ -13,7 +13,7 @@ export default function Sidebar(){
     
     }
 return(
-<div class="sidebar">
+<div className="sidebar">
   <User image = {user.image} loginUser = {user.loginUser} signInName = {user.signInName}/>
   <Suggestions/>
   <Footer/>

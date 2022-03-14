@@ -1,10 +1,10 @@
 function Story({image,userName}){
   return(
-    <div class="story">
-      <div class="imagem">
+    <div className="story">
+      <div className="imagem">
       <img src={`assets/img/${image}`} />
       </div>
-      <div class="usuario">
+      <div className="usuario">
       {userName}  
       </div>
     </div>
@@ -25,9 +25,9 @@ export default function Stories(){
   ];
   
     return(           
-      <div class="stories">
-        {stories.map((story)=> <Story image ={story.image}userName ={story.userName}/> )}
-        <div class="setinha">
+      <div className="stories">
+        {stories.map((story,index)=> <Story image ={story.image}userName ={story.userName} key ={index}/> )}
+        <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
       </div>
