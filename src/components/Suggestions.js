@@ -13,9 +13,6 @@ function UserSuggestions({image,userName,followingOrNot}){
   );
 }
 
-
-
-
 export default function Suggestions(){
   const suggestions = [
     {image:"bad.vibes.memes.svg",userName: "bad.vibes.memes",followingOrNot:"Segue você"},
